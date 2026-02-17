@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -380,7 +381,12 @@ export const HeroSection: React.FC = () => {
             <div className="hidden md:flex items-center space-x-6 ml-8">
               <button className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors">Technology</button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">Projects</button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">Research</button>
+              <Link
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+                href="/gallery"
+              >
+                Gallery
+              </Link>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">Training</button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">Contact</button>
             </div>
@@ -424,7 +430,13 @@ export const HeroSection: React.FC = () => {
               </button>
               <button className="px-6 py-3 bg-gray-800/50 rounded-full">Technology</button>
               <button className="px-6 py-3">Projects</button>
-              <button className="px-6 py-3">Research</button>
+              <Link
+                className="px-6 py-3"
+                href="/gallery"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Gallery
+              </Link>
               <button className="px-6 py-3">Training</button>
               <button className="px-6 py-3">Contact</button>
               <button className="px-6 py-3">Work With Us</button>
