@@ -3,11 +3,44 @@
 
 :root {
     color-scheme: dark;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --toggle-bg: rgba(255, 255, 255, 0.08);
+    --toggle-text: #ffffff;
+    --toggle-border: rgba(255, 255, 255, 0.2);
+}
+
+.theme-light {
+    color-scheme: light;
+    --bg-color: #f7f8fb;
+    --text-color: #0f172a;
+    --toggle-bg: #ffffff;
+    --toggle-text: #0f172a;
+    --toggle-border: rgba(15, 23, 42, 0.2);
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: #000000;
-    color: #ffffff;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.theme-toggle-button {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 50;
+    padding: 6px 10px;
+    border-radius: 9999px;
+    border: 1px solid var(--toggle-border);
+    background: var(--toggle-bg);
+    color: var(--toggle-text);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+}
+
+.theme-toggle-button:hover {
+    filter: brightness(1.08);
 }

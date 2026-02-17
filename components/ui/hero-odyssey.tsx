@@ -380,7 +380,12 @@ export const HeroSection: React.FC = () => {
             </div>
             <div className="hidden md:flex items-center space-x-6 ml-8">
               <button className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors">Technology</button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">Projects</button>
+              <Link
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+                href="/about"
+              >
+                About
+              </Link>
               <Link
                 className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
                 href="/gallery"
@@ -429,7 +434,13 @@ export const HeroSection: React.FC = () => {
                 </svg>
               </button>
               <button className="px-6 py-3 bg-gray-800/50 rounded-full">Technology</button>
-              <button className="px-6 py-3">Projects</button>
+              <Link
+                className="px-6 py-3"
+                href="/about"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
               <Link
                 className="px-6 py-3"
                 href="/gallery"
