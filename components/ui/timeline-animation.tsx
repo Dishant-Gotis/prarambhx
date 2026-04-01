@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 
 interface TimelineContentBaseProps {
   animationNum?: number;
-  timelineRef?: RefObject<HTMLElement>;
+  timelineRef?: RefObject<HTMLElement | null>;
   customVariants?: Record<string, unknown>;
 }
 
@@ -37,9 +37,9 @@ const TimelineContent = forwardRef(
     }: TimelineContentProps<T>,
     ref: ForwardedRef<HTMLElement>
   ) => {
-    const elementRef = useRef<HTMLElement>(null);
+    const elementRef = useRef<HTMLElement | null>(null);
     const isInView = useInView(elementRef, {
-      root: timelineRef?.current ?? undefined,
+      root: timelineRef,
       margin: "-10% 0px",
       once: true,
     });
